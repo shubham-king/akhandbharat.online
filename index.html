@@ -1,0 +1,713 @@
+<!--
+=========================================================
+* Theme - v2.0.0
+=========================================================
+
+* Product Page: Akhand Bharat Theme
+* Released Date : 27 December 2022
+* Origin Country : India 
+* Aim : To Provide Legal Information To New Youths 
+* Copyright 2022
+
+* Coded by Shubham kumar
+
+=========================================================
+
+* Hi , I am Shubham Kumar. I have created this page . If you have any queries you can contact us :- https://www.charifit.tech/p/contact-us.html
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      
+  <!-- Primary Meta Tags -->
+  <link rel="canonical" href="https://akhandbharat.online/">
+  <title>Akhand Bharat 🚩 - Sanatan Dharma </title>
+  <meta name="title" content="अखण्ड भारत - Akhand Bharat 🚩">
+  <meta name="description" content="अखण्ड भारत का तात्पर्य अविभाजित भारत से है जिसका भौगोलिक विस्तार प्राचीन काल में बहुत विस्तृत था और इसमें वर्तमान अफगानिस्तान, पाकिस्तान, बांग्लादेश, श्रीलंका, म्यांमार, थाईलैंड शामिल थे।">
+  <meta name="keywords" content="akhand bharat , अखण्ड भारत , hindu rastra , hindu samarajy , great india , undivided india , hindu dharm , sanatan , ashoka akhand bharat, akhand bharat map , akhand bharat English , new akhand bharat , kattar hindu, ">
+
+
+
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akhandbharat.online/">
+  <meta property="og:title" content="अखण्ड भारत 🚩 Akhand Bharat  ">
+  <meta property="og:description" content="अखण्ड भारत 🚩 -  Great India / Undivided India - Future Of India ">
+  <meta property="og:image" content="img/logo.jpg">
+
+ <link rel="icon" type="image/jpg" href="img/logo.png" />
+  
+<link type="text/css" href="css/main.css" rel="stylesheet">
+<link type="text/css" href="css/style.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src='js/script.js'></script>
+
+ <style>
+body{
+    background-color: orange;
+}
+
+ </style>
+ 
+ <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=63adfebaeb42960019cdfa13&product=inline-reaction-buttons&source=platform" async="async"></script>
+ 
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+  
+</head>
+<body>
+    <div class="wrappers">
+    <div class="toast">
+      <div class="content">
+        <div class="icon"><i class="uil uil-wifi"></i></div>
+        <div class="details">
+          <span>You're online now</span>
+          <p>Hurray! Internet is connected.</p>
+        </div>
+      </div>
+      <div class="close-icon"><i class="uil uil-times"></i></div>
+    </div>
+  </div>
+
+<script>
+    // Selecting all required elements
+const wrappers = document.querySelector(".wrappers"),
+toast = wrappers.querySelector(".toast"),
+title = toast.querySelector("span"),
+subTitle = toast.querySelector("p"),
+wifiIcon = toast.querySelector(".icon"),
+closeIcon = toast.querySelector(".close-icon");
+
+window.onload = ()=>{
+    function ajax(){
+        let xhr = new XMLHttpRequest(); //creating new XML object
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true); //sending get request on this URL
+        xhr.onload = ()=>{ //once ajax loaded
+            //if ajax status is equal to 200 or less than 300 that mean user is getting data from that provided url
+            //or his/her response status is 200 that means he/she is online
+            if(xhr.status == 200 && xhr.status < 300){
+                toast.classList.remove("offline");
+                title.innerText = "You're online now";
+                subTitle.innerText = "Hurray! Internet is connected.";
+                wifiIcon.innerHTML = '<i class="uil uil-wifi"></i>';
+                closeIcon.onclick = ()=>{ //hide toast notification on close icon click
+                    wrappers.classList.add("hide");
+                }
+                setTimeout(()=>{ //hide the toast notification automatically after 5 seconds
+                    wrappers.classList.add("hide");
+                }, 1000);
+            }else{
+                offline(); //calling offline function if ajax status is not equal to 200 or not less that 300
+            }
+        }
+        xhr.onerror = ()=>{
+            offline(); ////calling offline function if the passed url is not correct or returning 404 or other error
+        }
+        xhr.send(); //sending get request to the passed url
+    }
+
+    function offline(){ //function for offline
+        wrappers.classList.remove("hide");
+        toast.classList.add("offline");
+        title.innerText = "You're offline now";
+        subTitle.innerText = "Opps! Internet is disconnected.";
+        wifiIcon.innerHTML = '<i class="uil uil-wifi-slash"></i>';
+    }
+
+    setInterval(()=>{ //this setInterval function call ajax frequently after 100ms
+        ajax();
+    }, 100);
+}
+
+</script>
+
+    
+    
+    <nav id='menu'>
+  <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul>
+    <li><a href='#'>Home</a></li>
+   
+    <li><a href='https://rastriyhindus.blogspot.com/'>Main Website</a></li>
+    
+    <li><a href='http://instagram.com/ig.shubham.kumar'>Developer IG</a></li>
+  </ul>
+</nav>
+    
+    <br>
+    
+    <center>
+    <img src="img/menu.png" alt="Akhand Bharat" class="img">
+    </center>
+
+ <br>
+
+ 
+ 
+ <center>
+     <button class="button-61" onclick="window.location.href = 'https://t.me/RastriyHindu';"> 
+   Join Telegram Channel 
+    </button> 
+ </center>
+ 
+ <br>
+ <div class="mtbox yellow">
+     <h2>अखण्ड भारत 🚩</h2>
+     
+    <br>
+    <img src="img/abm.jpg" class="img" alt="akhand bharat map">
+     <p>
+       <b>  अखण्ड भारत </b>का तात्पर्य अविभाजित भारत से है जिसका भौगोलिक विस्तार प्राचीन काल में बहुत विस्तृत था और इसमें वर्तमान अफगानिस्तान, पाकिस्तान, बांग्लादेश, श्रीलंका, म्यांमार, थाईलैंड शामिल थे।
+     </p>
+     
+     <p>
+       <b>अखंड भारत </b>का विचार सनातन भारतीय सभ्यता जितना ही पुराना है क्योंकि इसे प्राचीन भारतीय शास्त्रों में विधिवत स्थान मिला और वर्णित किया गया है। . उस समय, तीसरी शताब्दी ईसा पूर्व, भारतीय उपमहाद्वीप - जो अब अफगानिस्तान, पाकिस्तान, आधुनिक भारत, नेपाल, बर्मा, तिब्बत, भूटान और बांग्लादेश के आधुनिक राष्ट्रों को कवर करता है - को कई स्वतंत्र राज्यों में विभाजित किया गया था। चाणक्य ने एक अखंड भारत के विचार को भी व्यक्त किया, जिसका अर्थ है कि क्षेत्र के सभी राज्य एक प्राधिकरण, शासन और प्रशासन के अधीन हैं।  
+     </p>
+     <p>
+        महान स्वतंत्रता सेनानी <b> विनायक दामोदर सावरकर </b> ने हिंदुओं की सांस्कृतिक, धार्मिक और राजनीतिक एकता पर जोर देते हुए अखंड भारत और हिंदू राष्ट्र <v>('हिंदू राष्ट्र') </b> की धारणा को प्रतिपादित किया। भारतीय स्वतन्त्रता आन्दोलन के समय कनैयालाल माणिकलाल मुंशी ने अखण्ड हिन्दुस्तान की वकालत की। 7-8 अक्टूबर 1944 को, दिल्ली में, राधा कुमुद मुखर्जी, एक प्रमुख बुद्धिजीवी, ने अखंड हिंदुस्तान लीडर्स कॉन्फ्रेंस की अध्यक्षता की। 
+     </p>
+ </div>
+ <br>
+
+ <center>
+    <div class="text-effect">
+        <span>जय श्री राम 🚩</span>
+    </div>
+ </center>
+ 
+ 
+ <br>
+ 
+ 
+ <div class="mtbox pink">
+     <h2>Akhand Bharat 🚩</h2>
+     <br>
+     <img src="img/abm.jpg" class="img" alt="akhand bharat map">
+     <p>
+        <b> Akhand Bharat </b>implies undivided Bharat whose geographical expanse was very wide in ancient times and it included among others present day Afghanistan, Pakistan, Bangladesh, Sri Lanka, Mayanmar, Thailand.
+     </p>
+     
+     <p>
+         The idea of<b> Akhand Bharat</b> is as old as<b> Sanatan Bharatiya civilization </b>as it duly got place and described in ancient Bharatiya scriptures. . At the time, the 3rd century BC, the Bharatiya subcontinent–which covered what are now the modern-day nations of Afghanistan, Pakistan, Modern Bharat, Nepal, Burma, Tibet, Bhutan and Bangladesh–was divided into many independent kingdoms. Chanakya also articulated the idea of an Akhand Bharat, which means all states in the region being under one authority, rule and administration.</p>
+         <p> The great freedom fighter <v>Vinayak Damodar Savarkar </b>, propounded the notion of an Akhand Bharat as well as a Hindu Rashtra<b> (‘Hindu Nation’)</b>, emphasizing the cultural, religious and political unity of Hindus ‘. At the time of the Bharatiya Independence Movement, Kanaiyalal Manilklal Munshi advocated for Akhand Hindustan. On 7–8 October 1944, in Delhi, Radha Kumud Mukherjee, a leading intellectual, presided over the Akhand Hindustan Leaders’ Conference.
+     </p>
+ </div>
+ 
+ <br>
+ 
+  <center>
+    <div class="text-effect">
+        <span>जय श्री राम 🚩</span>
+    </div>
+    </center>
+ 
+ 
+ <br>
+ <div class="wrapper">
+	    <div class="box">
+	       <center>
+	        <i class="fas fa-check"></i> <b>Liked My Work ? Support Me !</b>
+	        <br>
+	        <br>
+	         <button class="button-41" onclick="window.location.href = 'donate.html';"> 
+   Donate  us <i class="fas fa-donate"></i>
+    </button> 
+	     </center>   
+	 
+	<br>
+ <!-- share -->
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_telegram"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+    </div>
+	</div>
+    
+    <div class="mtbox red">
+        <h2>Hinduism 🚩</h2>
+        <br>
+        <img src="img/crowd.jpg" alt="hindus" class="img">
+        <p>
+            हिन्दू धर्म एक धर्म है जिसके अनुयायी अधिकांशतः भारत, नेपाल और मॉरिशस में बहुमत में हैं। इसके अलावा सूरीनाम, फिजी इत्यादि। इसे विश्व का प्राचीनतम धर्म माना जाता है। इसे 'वैदिक सनातन वर्णाश्रम धर्म' भी कहते हैं जिसका अर्थ है कि इसकी उत्पत्ति मानव की उत्पत्ति से भी पहले से है। 
+        </p>
+        <p>
+            Hinduism is an Indian religion or dharma, a religious and universal order or way of life by which followers abide. As a religion, it is the world's third-largest, with over 1.2–1.35 billion followers, or 15–16% of the global population, known as Hindus
+        </p>
+    </div>
+    <br>
+    
+     <center>
+    <div class="text-effect">
+        <span>जय श्री राम 🚩</span>
+    </div>
+    </center>
+    
+    <br>
+    <div class="mtbox pink">
+        <h2> Mission - उद्देश्य </h2>
+        <br>
+        <center>
+        <img src="img/crowd.jpg" alt="Logo" class="img"></center>
+        
+        <p>
+            अखंड का अर्थ है "अविभाजित"। अखण्ड भारत एवं राष्ट्रीय हिन्दू संघ' का मुख्य उद्देश्य हिन्दू धर्म एवं हिन्दू संस्कृति का प्रचार-प्रसार करना है। संगठन का उद्देश्य "अखंड राष्ट्र-हिंदू राष्ट्र" के सूत्र का प्रसार करना और राष्ट्र में सभी को हिंदू एकता से जोड़ना और हिंदू भाइयों और बहनों के अधिकारों और कल्याण के लिए काम करना है। संगठन का उद्देश्य हिंदू धर्म में अस्पृश्यता और भेदभाव की भावना को दूर करना और हिंदू भाई-बहनों के बीच एक सामंजस्यपूर्ण हिंदू धर्म की स्थापना करना है।
+
+        </p>
+        <p>मुख्य उद्देश्य हमारी हिंदू संस्कृति की रक्षा करना और हमारी संस्कृति और विविधता के मार्ग पर चलना है। अखंड राष्ट्रीय हिंदू सेना का मुख्य उद्देश्य हिंदुत्व, अखंड राष्ट्र, एकता और सेवाभाव का प्रसार करना है। हमारा मूल मंत्र "हम सब हिंदू एक है" को मानवता की भावना से एकजुट राष्ट्र में बदलना और अविभाजित राष्ट्र का निर्माण करना है।</p>
+        </div>
+    
+    
+    <center>
+        <h1> Archive - Architecture</h1>
+    </center>
+    
+    <div class="mtbox red">
+        <h2>
+          Ram mandir (राम मंदिर)
+        </h2>
+        <br>
+        <center>
+        <img src="img/mandir1.jpeg" alt="Ram mandir (राम मंदिर)" class="img">
+        </center>
+        
+        <p>
+            राम मंदिर एक हिंदू मंदिर है जो अयोध्या, उत्तर प्रदेश, भारत में राम जन्मभूमि स्थल पर बनाया जा रहा है, रामायण के अनुसार, हिंदू धर्म के एक प्रमुख देवता, राम का जन्मस्थान।  मंदिर निर्माण की देखरेख श्रीराम जन्मभूमि तीर्थ क्षेत्र कर रहा है। ग्राउंड-ब्रेकिंग समारोह 5 अगस्त 2020 को भारत के प्रधान मंत्री नरेंद्र मोदी द्वारा किया गया था। मंदिर परिसर में देवताओं सूर्य, गणेश, शिव, दुर्गा, विष्णु और ब्रह्मा को समर्पित मंदिर शामिल होंगे।
+        </p>
+        <p>
+            Ram Mandir is a Hindu temple that is being built in Ayodhya, Uttar Pradesh, India, at the site of Ram Janmabhoomi, according to the Ramayana the birthplace of Rama, a principal deity of Hinduism. The temple construction is being supervised by the Shri Ram Janmabhoomi Teerth Kshetra. The ground-breaking ceremony was performed on 5 August 2020 by India’s prime minister Narendra Modi. The temple premises will include temples dedicated to deities Surya, Ganesha, Shiva, Durga, Vishnu and Brahma.
+        </p>
+        </div>
+ 
+ 
+ <div class="mtbox red">
+        <h2>
+         काशी विश्वनाथ मंदिर, वाराणसी / Kashi Vishwanath
+
+        </h2>
+        <br>
+        <center>
+        <img src="img/article115.jpg" alt="काशी विश्वनाथ मंदिर, वाराणसी / Kashi Vishwanath
+" class="img">
+        </center>
+        <p>
+            काशी विश्वनाथ मंदिर भगवान शिव को समर्पित एक प्रसिद्ध हिंदू मंदिर है। यह भारत में उत्तर प्रदेश के वाराणसी के विश्वनाथ गली में स्थित है। मंदिर पवित्र गंगा नदी के पश्चिमी तट पर स्थित है, और शिव मंदिरों में सबसे पवित्र बारह ज्योतिर्लिंगों में से एक है। मुख्य देवता को श्री विश्वनाथ और विश्वेश्वर (IAST: विश्वेश्वर या विश्वेश्वर) के नाम से जाना जाता है, जिसका शाब्दिक अर्थ ब्रह्मांड का भगवान है। वाराणसी को प्राचीन काल में काशी ("चमकदार") कहा जाता था, और इसलिए मंदिर को काशी विश्वनाथ मंदिर कहा जाता है।
+        </p>
+        <p>
+            The Kashi Vishwanath Temple is a famous Hindu temple dedicated to Lord Shiva. It is located in Vishwanath Gali of Varanasi, Uttar Pradesh in India. The temple stands on the western bank of the holy river Ganga, and is one of the twelve Jyotirlingas, the holiest of Shiva temples. The main deity is known by the names Shri Vishwanath and Vishweshwara (IAST: Vishveshvara or Vishveshvur) literally meaning Lord of the Universe. Varanasi was called Kashi ("shining") in ancient times, and hence the temple is popularly called Kashi Vishwanath Temple.
+        </p>
+    </div>
+ 
+ 
+ 
+ 
+    <div class="mtbox red">
+        <h2>वैष्णो देवी मंदिर / Vaishno Devi Mandir, Jammu</h2>
+        <br>
+        <center>
+            <img src="img/Mata_vaishno_devi_pindi_photo.jpg" alt="वैष्णो देवी मंदिर / Vaishno Devi Mandir, Jammu" class="img">
+        </center>
+        <p>
+            वैष्णो देवी या श्री माता वैष्णो देवी मंदिर, हिन्दू मान्यता अनुसार, माँ आदिशक्ति दुर्गा स्वरूप माँ वैष्णो देवी जिन्हे त्रिकुटा और वैष्णवी नाम से भी जाना जाता है, देवी को समर्पित मुख्य पवित्रतम हिन्दू मंदिरों में से एक है, जो भारत केेे जम्मू और कश्मीर के जम्मू सम्भाग में त्रिकुट पर्वत पर स्थित है। इस धार्मिक स्थल की आराध्य देवी, वैष्णो देवी को सामान्यतः माता रानी, वैष्णवी, दुर्गा तथा शेरावाली माता जैसे अनेक नामो से भी जाना जाता है।</p> <p>यहा पर आदिशक्ति स्वरूप महालक्ष्मी, महाकाली तथा महासरस्वती पिंडी रूप मे त्रेता युग से एक गुफा मे विराजमान है और माता वैष्णो देवी स्वयं यहा पर अपने शाश्वत निराकार रूप मे विराजमान है। वेद पुराणो के हिसाब से ये मंदिर 108 शक्ति पीठ मे भी शामिल है। यहा पर लोग 14 किमी की चढ़ाई करके भवन तक पहुँचते है। घोड़ा, पिठु, पालकी, हेलिकॉप्टर, ट्राम रोपवे जैसी अनेक सुविधाए यहाँ पर उपलब्द है। यहा पर पहुँचने के लिए मुख्य दो साधन है - रेलवे और रोडवे जिसमे से जादातार लोग रेलवे अर्थार्थ ट्रेन से आना पसंद करते है। यहा का रेलवे स्टेशन श्री माता वैष्णो देवी कटरा पूरे भारत से जुड़ा हुआ है।
+        </p>
+        
+        <p>
+            Vaishno Devi or Shri Mata Vaishno Devi Temple is one of the main holiest Hindu temples dedicated to the goddess Maa Adishakti Durga Swarup Maa Adishakti Durga, also known as Trikuta and Vaishnavi, according to Hindu belief, located in the Indian state of Jammu and Kashmir. It is situated on Trikut mountain in Jammu division. The presiding deity of this shrine, Vaishno Devi is commonly known by many names like Mata Rani, Vaishnavi, Durga and Sherawali Mata.
+        </p>
+        <p>
+            Here Mahalakshmi, Mahakali and Mahasaraswati in the form of Adishakti are sitting in a cave from Treta Yuga and Mata Vaishno Devi herself is sitting here in her eternal formless form.According to Ved Puranas, this temple is also included in 108 Shakti Peethas. Here people reach the building by climbing 14 km. Many facilities like horse, pithu, palanquin, helicopter, tram ropeway are available here. There are two main means to reach here - Railway and Roadway, out of which most of the people prefer to come by railway means train. Here the railway station Shri Mata Vaishno Devi Katra is connected to the whole of India.
+        </p>
+    </div>
+    
+    
+    <div class="mtbox red">
+        <h2>
+          मीनाक्षी मंदिर, मदुरै / Meenakshi Temple, Madurai  
+        </h2>
+        <br>
+        <center>
+        <img src="img/Temple_de_Mînâkshî01.jpg" alt="मीनाक्षी मंदिर, मदुरै / Meenakshi Temple, Madurai" class="img">
+        </center>
+        <p>
+            अरुलमिगु मीनाक्षी सुंदरस्वरार मंदिर एक ऐतिहासिक हिंदू मंदिर है जो वैगई नदी के दक्षिणी तट पर स्थित है  मदुरै, तमिलनाडु, भारत के मंदिर शहर  में। यह देवी मीनाक्षी, पार्वती का एक रूप, और उनकी पत्नी, सुंदरेश्वर, शिव का एक रूप, को समर्पित है।  मंदिर प्राचीन मंदिर शहर मदुरै के केंद्र में है, जिसका तमिल संगम साहित्य में उल्लेख किया गया है, जिसमें देवी मंदिर का उल्लेख 6वीं शताब्दी-सीई ग्रंथों में किया गया है। यह मंदिर पाडल पेट्रा स्थलम में से एक है। पाडल पेट्रा स्थलम भगवान शिव के 275 मंदिर हैं जो 6वीं-9वीं शताब्दी सीई के तमिल शैव नयनारों के छंदों में प्रतिष्ठित हैं।
+        </p>
+        <p>
+            Arulmigu Meenakshi Sundaraswarar Temple is a historic Hindu temple located on the southern bank of the Vaigai River in the temple city of Madurai, Tamil Nadu, India. It is dedicated to the goddess Meenakshi, a form of Parvati, and her consort, Sundareshwarar, a form of Shiva. The temple is at the center of the ancient temple city of Madurai mentioned in the Tamil Sangam literature, with the goddess temple mentioned in 6th-century-CE texts. This temple is one of the Paadal Petra Sthalams. The Paadal Petra sthalams are 275 temples of lord Shiva that are revered in the verses of Tamil Saiva Nayanars of 6th-9th century CE.
+        </p>
+    </div>
+    <br>
+    
+    <center>
+        <h1>Our Ancestors </h1>
+    </center>
+    
+    
+      <div class="mtbox red">
+        <h2>
+          छत्रपति शिवाजी महाराज
+        </h2>
+        <br>
+        <center>
+        <img src="img/Chhatrapati-Shivaji-ili-112-img-1.jpg" alt="छत्रपति शिवाजी महाराज" class="img">
+        </center>
+        <p>
+            छत्रपति शिवाजी महाराज पश्चिमी भारत में मराठा साम्राज्य के संस्थापक थे। उन्हें अपने समय के सबसे महान योद्धाओं में से एक माना जाता है और आज भी लोककथाओं के रूप में उनके कारनामों की कहानियां सुनाई जाती हैं। अपनी वीरता और महान प्रशासनिक कौशल के साथ, शिवाजी ने बीजापुर की गिरती हुई आदिलशाही सल्तनत से एक एन्क्लेव बनाया। यह अंततः मराठा साम्राज्य की उत्पत्ति बन गया। अपना शासन स्थापित करने के बाद, शिवाजी ने एक अनुशासित सैन्य और सुस्थापित प्रशासनिक व्यवस्था की मदद से एक सक्षम और प्रगतिशील प्रशासन लागू किया। शिवाजी अपनी नवीन सैन्य रणनीति के लिए जाने जाते हैं जो अपने अधिक शक्तिशाली दुश्मनों को हराने के लिए भूगोल, गति और आश्चर्य जैसे रणनीतिक कारकों का लाभ उठाने वाले गैर-पारंपरिक तरीकों पर केंद्रित है।
+        </p>
+        
+        <p>
+            Chatrapati Shivaji Maharaj was the founder of the Maratha Empire in western India. He is considered to be one of the greatest warriors of his time and even today, stories of his exploits are narrated as a part of the folklore. With his valor and great administrative skills, Shivaji carved out an enclave from the declining Adilshahi sultanate of Bijapur. It eventually became the genesis of the Maratha Empire. After establishing his rule, Shivaji implemented a competent and progressive administration with the help of a disciplined military and well-established administrative set-up. Shivaji is well-known for his innovative military tactics that centered around non-conventional methods leveraging strategic factors like geography, speed, and surprise to defeat his more powerful enemies.
+        </p>
+    </div>
+    
+    
+      <div class="mtbox red">
+        <h2>
+          महाराणा प्रताप सिंह
+        </h2>
+        <br>
+        <center>
+        <img src="img/Maharana-Pratap.jpg" alt="Maharana-Pratap" class="img">
+        </center>
+        <p>
+            महाराणा प्रताप सिंह सिसोदिया उदयपुर, मेवाड़ में सिसोदिया राजवंश के राजा थे। उनका नाम इतिहास में वीरता, शौर्य, त्याग, पराक्रम और दृढ प्रण के लिये अमर है। उन्होंने मुगल बादशहा अकबर की अधीनता स्वीकार नहीं की और कई सालों तक संघर्ष किया।
+        </p>
+        <p>
+            Pratap Singh I, popularly known as Maharana Pratap, was a king of Mewar from the Sisodia dynasty. Pratap became a folk hero for his military resistance against the expansionism of the Mughal Empire under Akbar through guerrilla warfare which proved inspirational for later rebels against Mughals including Shivaji. 
+        </p>
+       
+    </div>
+    
+    
+    <div class="mtbox red">
+        <h2>
+          विक्रमादित्य 
+        </h2>
+        <br>
+        <center>
+        <img src="img/vikramaditya-statue.jpg" alt="vikramaditya" class="img">
+        </center>
+        <p>
+            विक्रमादित्य उज्जैन के राजा थे, जो अपने ज्ञान, वीरता और उदारशीलता के लिए प्रसिद्ध थे। उन्होंने पूरे एशिया पर अपना शासन व्यवस्थित किया था। अरब पर इनके शासन का प्रमाण सायार-उल-ओकुल ग्रंथ के पृष्ठ संख्या 315 से मिलता है, इस ग्रंथ की रचना अरबी कवि जरहाम कितनोई ने की। 
+        </p>
+        <p>
+            Vikramaditya was a legendary king who has been featured in hundreds of traditional stories including those in Baital Pachisi and Singhasan Battisi. Many describe him as ruler with his capital at Ujjain. The term Vikramaditya is also used as a title by several Hindu monarchs. 
+        </p>
+    </div>
+    
+    <div class="mtbox red">
+        <h2>
+          क्षत्राणी रानी दुर्गावती
+        </h2>
+        <br>
+        <center>
+        <img src="img/Rani_Durgavati_Balidan_Diwas.jpg" alt="Rani_Durgavati_Balidan" class="img">
+        </center>
+        <p>
+            क्षत्राणी रानी दुर्गावती भारत की एक प्रसिद्ध क्षत्राणी वीरांगना थीं, जिसने मध्य प्रदेश के गोंडवाना क्षेत्र पे शासन किया।उनका जन्म 5 अक्टूबर 1524 को कालिंजर के राजा कीर्तिसिंह चंदावेल के यहाँ हुआ उनका राज्य गढ़मंडला था, जिसका केंद्र जबलपुर था।
+        </p>
+        <p>
+            Rani Durgavati was the ruling Queen of Gondwana from 1550 until 1564. She was born in the family of Chandel Rajput king Salibahan at the fort of Mahoba. She was married to Dalpat Shah the son of the king Sangram Shah of the Garha Kingdom.
+        </p>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+<br>
+<br>
+
+
+<div class="wrapper">
+    <div class="box">
+      <i class="fas fa-quote-left quote"></i>
+      <p>Akhand Bharat is not only an idea but a well thought determined goal. All those who consider, partition as unalterable pillar, are misguided and illusioned. Such views are only reflection of lack of staunch love towards Motherland</p>
+      <div class="content">
+        <div class="info">
+          <div class="name">DeenDayal Upadhyay</div>
+          <div class="job">Bharatiya JanaSangh</div>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="image">
+          <img src="img/Pt_Deendayal_Upadhyay.jpg" alt="Pt Deendayal Upadhyaya">
+        </div>
+      </div>
+    </div>
+    
+    <div class="box">
+      <i class="fas fa-quote-left quote"></i>
+      <p>Remorse cleanses the sins, but souls who should have been aggrieved with sorrow for misdeeds of partition are pouring the sands over their ignominy and celebrating it with lauds. Come, people should repent-not only for their mistakes but the misdeeds of their leaders also..</p>
+      <div class="content">
+        <div class="info">
+          <div class="name">Ram Manohar Lohia</div>
+          <div class="job">Indian Congress Party</div>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="image">
+          <img src="img/Ram_Manohar_Lohia_1977_stamp_of_India.jpg" alt="Ram Manohar Lohia">
+        </div>
+      </div>
+    </div>
+    
+    <div class="box">
+      <i class="fas fa-quote-left quote"></i>
+      <p>LoThe history of last forty years is witness of the fact that none has benefitted from partition. If India was united in its original form, it could have become not only and global power but it would have contributed a lot to world peace and well-being</p>
+      <div class="content">
+        <div class="info">
+          <div class="name">Gulam Murtaza Saiyad </div>
+          <div class="job">Sindhi leader</div>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="image">
+          <img src="img/1280px-G-M-Syed.jpg" alt="Gulam Murtaza">
+        </div>
+      </div>
+    </div>
+    </div>
+	
+	
+	<div class="wrapper">
+	    <div class="box">
+	       <center>
+	        <i class="fas fa-check"></i> <b>Liked My Work ? Support Me !</b>
+	        <br>
+	        <br>
+	         <button class="button-41" onclick="window.location.href = 'donate.html';"> 
+   Donate  us <i class="fas fa-donate"></i>
+    </button> 
+	     </center>   
+	    </div>
+	</div>
+	
+	
+	<br>
+	<br>
+	<div class="mtbox"> 
+<main>
+<details open>
+    <summary>Was Philippines part of Akhand Bharat?</summary>
+    <div class="faq__content">
+      <p>If we talk about Mahabharata and Ramayana period, countries like Malaysia, Indonesia, Thailand, Philippines, Vietnam, Cambodia were also unbreakable parts of India (Aryavarta). The ancient name of Singapore was Singhpur.</p>
+<p>
+Unbroken India extended from the Himalayas to the Indian Ocean and from Iran to Indonesia. India’s area in 1857 was 83 lakh square kilometers, which is currently 33 lakh square kilometers. From 1857 to 1947, India was fragmented many times by external powers. Afghanistan was separated from India in 1876, Nepal in 1904, Bhutan in 1906, Tibet in 1907, Sri Lanka in 1935, Myanmar in 1937 and Pakistan in 1947. </p>
+    </div>
+  </details>
+  
+  
+  
+  <details>
+    <summary>We are the Oldest Civilization </summary>
+    <div class="faq__content">
+      <p>The word Hindu is an exonym, and while Hinduism has been called the oldest religion in the world, many practitioners refer to their religion as Sanātana Dharma (Sanskrit: सनातन धर्म)</p>
+    </div>
+  </details>
+  
+  <details>
+    <summary>Best & Peaceful Religion </summary>
+    <div class="faq__content">
+      <p>The Hindu religion is the only one of the world's great faiths dedicated to the idea that the Cosmos itself undergoes an immense, indeed an infinite, number of deaths and rebirths.
+
+It is the only religion in which the time scales correspond, to those of modern scientific cosmology.
+</p><p>
+Its cycles run from our ordinary day and night to a day and night of Brahma, 8.64 billion years long. Longer than the age of the Earth or the Sun and about half the time since the Big Bang. And there are much longer time scales still."
+</p><p>
+There is the deep and appealing notion that the universe is but the dream of the god who, after a Brahma years, dissolves himself into a dreamless sleep. The universe dissolves with him - until, after another Brahma century, he stirs, recomposes himself and begins again to dream the great cosmic dream." </p>
+    </div>
+  </details>
+  
+  <details>
+    <summary>Hinduism & Gods</summary>
+    <div class="faq__content">
+      <p>Hinduism is a religion with various Gods and Goddesses. According to Hinduism, three Gods rule the world. Brahma: the creator; Vishnu: the preserver and Shiva: the destroyer. Lord Vishnu did his job of preserving the world by incarnating himself in different forms at times of crisis.
+</p><p>
+The three Lords that rule the world have consorts and they are goddesses too. Consort of Brahma is Sarasvati; goddess of learning. Vishnu's consort is Lakshmi; goddess of wealth and prosperity. Shiva's consort is Parvati who is worshipped as Kali or Durga.
+Besides these Gods and Goddesses there are a number of other Gods and Goddesses. To name a few of them, there is Ganesh; who has an elephant's head and he is also a son of Shiva and Parvati, Hanuman; who is an ape, Surya; Lord of sun, Ganga Ma; Goddess of river Ganges; Samundra; Lord of the sea, Indra; king of the Gods ( but he isn't an important God), Prithvi; Goddess of earth, Shakti; Goddess of strength. The Hindus call their Goddesses 'Ma' meaning mother. </p>
+    </div>
+  </details>
+  
+  
+</main>
+</div>
+
+<br>
+<br>
+<div class="wrapper">
+    <div class="box">
+        <h3 style="text-align:center;"> Rate This Work & Share</h3>
+       
+       
+        <div class="sharethis-inline-reaction-buttons"></div>
+        <br>
+        <br>
+         <!-- share -->
+<!-- AddToAny BEGIN -->
+<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+<a class="a2a_button_facebook"></a>
+<a class="a2a_button_email"></a>
+<a class="a2a_button_whatsapp"></a>
+<a class="a2a_button_telegram"></a>
+</div>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+ 
+    
+    
+    </div>
+</div>
+
+
+ <br>
+ <br>
+ 
+        
+             <center>   
+                <div class="clock">
+         <div class="display">
+            <div id="time"></div>
+         </div>
+         <span></span>
+         <span></span>
+      </div>
+      </center>
+      
+      <br>
+      <br>
+      
+      
+      <div class="mtbox">
+            
+            <center>
+            <h3>AKHAND BHARAT 🚩</h3>
+            <p>मुख्य उद्देश्य हमारी हिंदू संस्कृति की रक्षा करना और हमारी संस्कृति और विविधता के मार्ग पर चलना है। अखंड राष्ट्रीय हिंदू सेना का मुख्य उद्देश्य हिंदुत्व, अखंड राष्ट्र, एकता और सेवाभाव का प्रसार करना है। हमारा मूल मंत्र "हम सब हिंदू एक है" को मानवता की भावना से एकजुट राष्ट्र में बदलना और अविभाजित राष्ट्र का निर्माण करना है। </p>
+           
+           <button class="button-41" onclick="window.location.href = 'donate.html';"> 
+   Donate  us <i class="fas fa-donate"></i>
+    </button>  
+            
+            <br>
+            <br>
+            
+            <ul class="socials">
+                <li><a href="https://m.facebook.com/100077962118371/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://t.me/rastriyhindu"><i class="fa fa-telegram"></i></a></li>
+                <li><a href="https://wa.me/message/R3EUJGPZUIJWG1"><i class="fa fa-whatsapp"></i></a></li>
+                <li><a href="https://instagram.com/ig.shubham.kumar"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/shubham00109"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+            </center>
+        
+        <div class="footer-bottom">
+            <p>Copyright © 2023 <a href="https://instagram.com/ig.shubham.kumar">- Mr Shubham Kumar ™</a>  </p>
+                    
+        </div></div>
+ 
+
+
+
+<div class="tTpB" id="backTop" onclick="window.scrollTo({top: 0});">
+  <svg viewBox="0 0 34 34">
+    <circle class="b" cx="17" cy="17" r="15.92"></circle>
+    <circle class="c scrollProgress" cx="17" cy="17" r="15.92"></circle>
+    <path class="line d" d="M15.07,21.06,19.16,17l-4.09-4.06"></path>
+  </svg>
+</div>
+
+<script type="text/javascript">
+   //<![CDATA[
+  	var progressPath = document.querySelector(".scrollProgress");
+  	var pathLength = progressPath.getTotalLength();
+
+  	progressPath.style.transition = progressPath.style.WebkitTransition = 'none';
+  	progressPath.style.strokeDasharray = pathLength + ' ' + pathLength;
+  	progressPath.style.strokeDashoffset = pathLength;
+  	progressPath.getBoundingClientRect();
+  	progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
+
+  	var updateProgress = function() {
+  		var scroll = document.documentElement.scrollTop;
+  		var height = document.documentElement.scrollHeight - window.innerHeight;
+  		var progress = pathLength - (scroll * pathLength / height);
+  		progressPath.style.strokeDashoffset = progress;
+  	}
+
+  	updateProgress();
+  	window.addEventListener('scroll', (updateProgress));
+
+  	var offset = 0;
+  	var duration = 550;
+
+  	window.onscroll = function() {
+  		 if (document.documentElement.scrollTop > offset) {
+  			document.querySelector('.tTpB').classList.add('vbl');
+  		} else {
+  			document.querySelector('.tTpB').classList.remove('vbl');
+  		}
+  	};
+
+  	document.querySelector('.tTpB').onclick = function() {
+  		document.querySelector('html, body').animate(window.scroll({
+             top: ['8px', '280px']
+                },{ duration: 2500,        // number in ms [this would be equiv of your speed].
+                    easing: 'ease-in-out',
+                    iterations: 1,         // infinity or a number.
+                 // fill: ''
+       }));
+  		return false;
+  	};
+  //]]>
+</script>
+
+<b:if cond='data:view.isSinglePost'></b:if>
+<!--[ Preloader by The Pro Project, Add class name 'flat' to 'blur' for blur background  ]-->
+  <div class='pldW flat'>
+    <div class='crcl'>
+      <div class='r'></div>
+      <div class='b'></div>
+      <div class='g'></div>
+      <div class='y'></div>
+    </div>
+  </div>
+  <script>
+    /*<![CDATA[*/
+    document.addEventListener('DOMContentLoaded', function() { setTimeout(function() { document.querySelector('.pldW').classList.add('fadeOut') }, 2000);
+      setTimeout(function() { document.querySelector('.pldW').classList.add('hidden') }, 2850) }); /*]]>*/
+  </script>
+  
+  
+ 
+</body>
+</html>
